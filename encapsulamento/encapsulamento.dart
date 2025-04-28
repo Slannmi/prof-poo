@@ -1,5 +1,9 @@
+import 'Aluno.dart';
 import 'ContaBancaria.dart';
+import 'Login.dart';
 import 'Produto.dart';
+import 'Semaforo.dart';
+import 'Temperatura.dart';
 
 /**
  encapsulamento é o conceito de ocultar os detalhes internos de uma classe e controlar o acesso aos seus atributos e métodos.
@@ -39,5 +43,32 @@ void main(List<String> args) {
   p.nome = "Caneta"; //chamando setter
   p.preco = 2.5; //chamando setter
   // p.nome e p.preco são getters
+  p.preco = -10;
   print("Produto: ${p.nome} Preço: ${p.preco}");
+
+  //login de usuário
+  Login user = Login();
+  user.autenticar('123'); //senha incorreta
+  user.autenticar('123456'); //senha incorreta
+  user.autenticar('123abc'); //senha correta
+
+  //semaforo
+  var s = Semaforo();
+  s.mostrarStatus();
+  s.mudarCor();
+  s.mostrarStatus();
+
+  //aluno
+  Aluno aluno = Aluno("Diego");
+  aluno.nota = 8;
+  print("Situação do aluno: ${aluno.situacaoAluno} Nota: ${aluno.nota}");
+
+  //temparatura
+  Temperatura t = Temperatura();
+  t.celsius = 25;
+  print("Temperatura em celsius: ${t.celsius}\n");
+  print("Temperatura em fahrenheit: ${t.fahrenheit}");
+
+  t.fahrenheit = 96.20;
+  print("Convertido para celsius: ${t.celsius.toStringAsFixed(2)}");
 }
