@@ -1,0 +1,53 @@
+Exercício 1 – Composição + SRP + Alta Coesão
+Implemente um sistema onde um Aluno possui um Endereco (composição). A classe Aluno deve apenas conter dados do aluno, enquanto a lógica de impressão do endereço deve estar em uma classe separada. Mantenha alta coesão e respeite o princípio da responsabilidade única (SRP).
+----------------------------------
+Exercício 2 – Associação + DIP + Baixo Acoplamento
+Implemente uma classe Relatorio que dependa de uma interface Exportador para exportar os dados. Crie duas implementações: ExportadorCSV e ExportadorPDF. O Relatorio não deve depender diretamente das classes concretas.
+----------------------------------
+
+Exercício 3 – Agregação + OCP + Coesão
+Crie uma classe Curso que agrega vários Modulos. Cada Modulo tem um método calcularNota(). Permita que novos tipos de módulo sejam criados sem precisar modificar a classe Curso. Use o princípio aberto/fechado (OCP).
+----------------------------------
+
+Exercício 4 – Composição + ISP + Acoplamento
+Crie um sistema com Funcionario e Robô. Ambos trabalham, mas apenas o Funcionario faz pausas. Divida as interfaces corretamente para que cada classe implemente apenas o que usar. Use composição quando necessário e reduza acoplamento.
+----------------------------------
+
+Exercício 5 – Agregação + LSP + Coesão
+Implemente uma classe FormaGeometrica, e duas subclasses: Quadrado e Retangulo. Ambas devem ser tratadas igualmente em uma função que soma áreas. A função deve respeitar o princípio da substituição de Liskov (LSP) e manter boa coesão.
+----------------------------------
+
+Exercício 6 – Composição + SRP + OCP
+Crie um sistema bancário onde ContaBancaria possui um Cliente (composição). A lógica de movimentação (depósito e saque) deve estar separada da lógica de geração de extrato. Permita adicionar novos tipos de conta (poupança, salário) sem modificar o código atual.
+----------------------------------
+
+Exercício 7 – Associação + DIP + OCP
+Crie uma classe Notificador que depende de uma interface CanalDeNotificacao. Crie duas implementações: NotificacaoEmail e NotificacaoSMS. A classe Notificador deve aceitar qualquer canal sem precisar ser alterada.
+----------------------------------
+
+Exercício 8 – Composição + SRP + ISP
+Modele um sistema de restaurante onde um Garcom possui um Pedido, e o pedido possui múltiplos Itens. O garçom apenas registra pedidos e não calcula preços. Crie uma interface para CalculadorDePreco e implemente separadamente.
+----------------------------------
+
+Exercício 9 – Agregação + OCP + DIP + LSP
+Implemente um sistema de pagamento onde CarrinhoDeCompras agrega vários Items e aceita diferentes tipos de Pagamento (crédito, débito, pix). Use uma abstração para os métodos de pagamento e garanta que o carrinho funcione com qualquer implementação (LSP).
+----------------------------------
+
+Exercício 10 – Todos os conceitos integrados
+Projete um mini sistema de biblioteca onde:
+
+Biblioteca agrega Livros.
+
+Livro possui um Autor (composição).
+
+Usuario pode pegar Livros emprestados (associação).
+
+A lógica de empréstimo e devolução deve respeitar SRP.
+
+Permita novos tipos de usuário (aluno, professor) sem alterar código existente (OCP).
+
+Use interfaces para ações como notificar usuário, calcular multa, etc (ISP e DIP).
+
+Garanta que Aluno e Professor possam ser usados de forma intercambiável (LSP).
+
+Minimize o acoplamento entre as classes.
